@@ -13,6 +13,17 @@ FlashJob es una plataforma de anuncios de trabajo rápido con dos tipos de usuar
 ## Cómo ejecutar el proyecto
 
 1. Clona este repositorio:
-'''bash
+   
+```bash
 git clone https://github.com/Dandragu99/FlashJob.git
-'''
+```
+## Estado del proyecto
+
+Este proyecto está en desarrollo como parte de un proyecto de fin de grado para FP.  
+Actualmente me encuentro en la primera fase, implementando la lógica de autenticación y la estructura de vistas según el rol del usuario.
+
+---
+
+## Autor
+
+Danut Dragu – [GitHub](https://github.com/Dandragu99)
