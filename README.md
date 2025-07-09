@@ -26,4 +26,4 @@ Actualmente me encuentro en la primera fase, implementando la lógica de autenti
 
 ## Autor
 
-Danut Dragu – [Linkedin](https://www.linkedin.com/in/danut-dragu-600695258/)
+Danut Dragu – [Linkedln](https://www.linkedin.com/in/danut-dragu-600695258/)
