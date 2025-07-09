@@ -25,11 +25,9 @@ def create_app():
     # importamos desde la clase main.py que está en blueprints lo mismo que hemos hecho más abajo
     # Todo esto también se puede hacer en la app.py
 
-
-
-
     from app.blueprints.main import main
     app.register_blueprint(main)
+    # Recurda, cada vez que sea crea algo nuevo ya sea una plantilla, hay que inicializarlo aquí.
     
     '''Lo creado en blueprints(admin) lo podemos importar aquí, así de fácil'''
     from app.blueprints.admin import admin

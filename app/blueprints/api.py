@@ -28,10 +28,20 @@ api = Blueprint('api', __name__)
 # Cuarto, obtenemos los datos, importantísimo también 
 def add_user():
     try:
-        name = request.args.get('name')
-        email = request.args.get('email')
-        rol = request.args.get('vendedor')
-        password = request.args.get('contraseña')
+        id_usuario = request.form.get('id')
+        name = request.form.get('name')
+        email = request.form.get('email')
+        rol = request.form.get('rol')  
+        password = request.form.get('contraseña')
+
+
+        # Debug: Ver qué se recibe
+        print(f"Datos recibidos:")
+        print(f"ID: {id_usuario}")
+        print(f"Name: {name}")
+        print(f"Email: {email}")
+        print(f"Rol: {rol}")
+        print(f"Password: {password}")
         '''
         Esto es lo que sirve para tomar los parámetros de la URL
         /api/adduser?name=Juan&email=juan@gmail.com
@@ -45,17 +55,17 @@ def add_user():
 # Sexto paso, cremos el usuario
         user = User(name = name, email = email, password = password, rol = rol)
         db.session.add(user)
-        db.session.commit
+        db.session.commit()
         '''
         El paso seis es el que crea el usuario, lo añade a la base de datos
         y lo guarda.
         '''
-# Paso 7 la respuesta
+# Paso 7 la respuesta para ver si es exitosa o no
         return jsonify({
             'success': True,
             'message': f'Usuario {name} creado',
             'user_id': user.id
-        })
+        }), 201 # Ponemos el 201 para creado
 
         '''
         Devuelve una respuesta en forma json

@@ -11,6 +11,10 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
+   <!-- Recuerda, Siempre siempre siempre
+   Que quiera poner una nueva ruta,ya sea una plantilla nueva
+    la tengo que declarar con @app.route
+   -->
    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
          <a class="navbar-brand" href="#">FlashJobs</a>
@@ -24,6 +28,9 @@
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="{{ url_for('admin.dashboard') }}">Registro</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('admin.dashboard') }}">Login</a>
                </li>
             </ul>
          </div>
@@ -43,7 +50,24 @@
    <!-- si ponemos un container queda más estético-->
    <!-- Para hacer los estilos lo haremos con bootstrap, se usa más react pero bootstrap es más sencillo-->
 
+   <h3>¿Buscas un trabajo rápido?</h3> <br>
+   <a href="/register">
+      <button type="button">Busco trabajo</button>
+   </a>
+    <br><br>
    
+   <br>
+   <h3>¿Buscas contratar a alguien lo más rápido posible?</h3><br>
+   <a href="/register">
+      <button type="button">Busco contratar</button>
+   </a>
+   <br><br>
+
+   
+   <div class="footer-links">
+      <a href="{{ url_for('main.empleado') }}">Empleados</a>
+      <a href="{{ url_for('main.Contratador') }}">Contratadores</a>
+   </div>
 
    {%block content%}{%endblock%}
 

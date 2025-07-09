@@ -6,7 +6,6 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
-</head>
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,7 +20,10 @@
                   <a class="nav-link active" aria-current="page" href="{{ url_for('main.index') }}">Home</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('admin.dashboard') }}">Registro</a>
+                  <a class="nav-link" href="{{ url_for('auth.register') }}">Registro</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
                </li>
             </ul>
          </div>
@@ -33,7 +35,7 @@
 <h1>
     AÑADE UN NUEVO USUARIO
 </h1>
-   <form action="api/adduser" method="post">
+   <form action="/api/adduser" method="post">
       <label for="id">id</label> <br>
       <input type="text" name="id" id="id" value="1"> <br>
 
@@ -41,17 +43,20 @@
       <input type="text" name="name" id="name" value="Paco"> <br>
 
       <label for="email">email</label> <br>
-      <input type="text" name="email" id="name" value="Paco@gmail.ne"> <br>
+      <input type="text" name="email" id="email" value="Paco@gmail.com"> <br>
 
       <label for="rol">rol</label> <br>
-      <input type="text" name="vendedor" id="rol" value="Paco"> <br>
+      <select name="rol" id="rol" required>
+        <option value=" ">Seleccione un rol</option>
+        <option value="Contratas">Contratas</option>
+        <option value="Trabajas">Trabajas</option>
+      </select> <br>
 
       <label for="contraseña">contraseña</label> <br>
       <input type="text" name="contraseña" id="contraseña" value="Paco123"> <br><br>
 
-
       <input type="submit" value="Enviar">
-   </form>
+    </form>
 
 
 
