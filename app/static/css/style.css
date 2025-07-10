@@ -1,0 +1,22 @@
+body{
+    background-color: #f9f9f9;
+}
+
+h1, h2{
+    color: #0d6efd;
+}
+
+/* Añado color a los botones que me tenían amargado */
+
+button{
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #0b5ed7;
+}
