@@ -1,0 +1,16 @@
+CREAR Y CAMBIAR RAMA GIT
+
+// Crear una nueva rama
+
+git branch nueva-trabajo
+
+// Truco para cambiar de rama
+
+git checkout -b nueva-trabajo
+
+// Subir la rama a GitHub (para que aparezca en el repo online)
+
+git push -u origin nueva-trabajo
+
+
+

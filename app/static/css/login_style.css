@@ -1,0 +1,18 @@
+body{
+    background-color: wheat;
+}
+
+
+.login-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+}

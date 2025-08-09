@@ -3,62 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Registro - FlashJobs</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register_style.css') }}">
 </head>
 <body>
 
+    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="#">FlashJobs</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{{ url_for('main.index') }}">Home</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('auth.register') }}">Registro</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </nav>
-   <div class="container"></div> 
-   <br>
-    
-<h1>
-    AÑADE UN NUEVO USUARIO
-</h1>
-   <form action="/api/adduser" method="post">
-      <label for="id">id</label> <br>
-      <input type="text" name="id" id="id" value="1"> <br>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FlashJobs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <label for="name">name</label> <br>
-      <input type="text" name="name" id="name" value="Paco"> <br>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('main.index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('auth.register') }}">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-      <label for="email">email</label> <br>
-      <input type="text" name="email" id="email" value="Paco@gmail.com"> <br>
+    <!-- Contenedor principal -->
+    <div class="container mt-4">
+        <div class="register-container">
+            <h1 class="text-center">Añade un nuevo usuario</h1>
 
-      <label for="rol">rol</label> <br>
-      <select name="rol" id="rol" required>
-        <option value=" ">Seleccione un rol</option>
-        <option value="Contratas">Contratas</option>
-        <option value="Trabajas">Trabajas</option>
-      </select> <br>
+            <form action="/api/adduser" method="post">
+                <label for="id">ID</label>
+                <input type="text" class="form-control mb-2" name="id" id="id" value="1">
 
-      <label for="contraseña">contraseña</label> <br>
-      <input type="text" name="contraseña" id="contraseña" value="Paco123"> <br><br>
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control mb-2" name="name" id="name" value="Paco">
 
-      <input type="submit" value="Enviar">
-    </form>
+                <label for="email">Email</label>
+                <input type="email" class="form-control mb-2" name="email" id="email" value="Paco@gmail.com">
 
+                <label for="rol">Rol</label>
+                <select name="rol" id="rol" class="form-select mb-2" required>
+                    <option value="">Seleccione un rol</option>
+                    <option value="Contratas">Contratas</option>
+                    <option value="Trabajas">Trabajas</option>
+                </select>
 
+                <label for="contraseña">Contraseña</label>
+                <input type="password" class="form-control mb-3" name="contraseña" id="contraseña" value="Paco123">
+
+                <input type="submit" value="Enviar" class="btn btn-primary w-100">
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (necesario para el menú desplegable) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
