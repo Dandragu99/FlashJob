@@ -1,0 +1,79 @@
+ /* Reset básico para eliminar márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del body - fondo y tipografía */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+ /* Contenedor principal - centrado y espaciado */
+.main-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+ /* Estilo del título principal */
+.main-title {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Grupos de campos del formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Etiquetas de los campos */
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Campos de entrada (input) */
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+
+ /* Botón de envío */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estado hover del botón */
+.submit-btn:hover {
+    background-color: #0052a3;
+}
+
