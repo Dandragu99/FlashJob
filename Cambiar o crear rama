@@ -13,4 +13,19 @@ git checkout -b nueva-trabajo
 git push -u origin nueva-trabajo
 
 
+// Cuando cambie de rama.
+ Primero guardar todo git push o git commit
+// Una vez guardado
+ Segundo git fetch
+// Y ya para poner la otra rama
+ Tercero git checkout nueva-trabajo
+// Y para asegurarme de que traigo toda la información de la rama nueva
+ git pull origin nueva-trabajo
+// Fin
 
+
+// Para cambiar el entorno de Ubuntu a Windows hay que crear nuevamente el venv y los requeriments
+
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
